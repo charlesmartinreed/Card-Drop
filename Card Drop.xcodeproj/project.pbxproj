@@ -8,20 +8,46 @@
 
 /* Begin PBXBuildFile section */
 		8C080E1521E01E6200F15E5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C080E1421E01E6200F15E5C /* AppDelegate.swift */; };
-		8C080E1721E01E6200F15E5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C080E1621E01E6200F15E5C /* ViewController.swift */; };
 		8C080E1A21E01E6200F15E5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C080E1821E01E6200F15E5C /* Main.storyboard */; };
 		8C080E1C21E01E6300F15E5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C080E1B21E01E6300F15E5C /* Assets.xcassets */; };
 		8C080E1F21E01E6300F15E5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C080E1D21E01E6300F15E5C /* LaunchScreen.storyboard */; };
+		8C080E2F21E01EC100F15E5C /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C080E2721E01EC000F15E5C /* Image.swift */; };
+		8C080E3021E01EC100F15E5C /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C080E2821E01EC000F15E5C /* Quote.swift */; };
+		8C080E3121E01EC100F15E5C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C080E2921E01EC000F15E5C /* Category.swift */; };
+		8C080E3221E01EC100F15E5C /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C080E2A21E01EC000F15E5C /* DataRequest.swift */; };
+		8C080E3321E01EC100F15E5C /* Images.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C080E2C21E01EC100F15E5C /* Images.plist */; };
+		8C080E3421E01EC100F15E5C /* Quotes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C080E2D21E01EC100F15E5C /* Quotes.plist */; };
+		8C080E3521E01EC100F15E5C /* Categories.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C080E2E21E01EC100F15E5C /* Categories.plist */; };
+		8C080E3721E0208C00F15E5C /* OverviewCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C080E3621E0208C00F15E5C /* OverviewCollectionViewController.swift */; };
+		8C080E3E21E0235700F15E5C /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8C080E3921E0235700F15E5C /* Montserrat-Bold.otf */; };
+		8C080E3F21E0235700F15E5C /* Montserrat-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8C080E3A21E0235700F15E5C /* Montserrat-ExtraLight.otf */; };
+		8C080E4021E0235700F15E5C /* Montserrat-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8C080E3B21E0235700F15E5C /* Montserrat-Medium.otf */; };
+		8C080E4121E0235700F15E5C /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8C080E3C21E0235700F15E5C /* Montserrat-Regular.otf */; };
+		8C080E4221E0235700F15E5C /* Montserrat-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8C080E3D21E0235700F15E5C /* Montserrat-SemiBold.otf */; };
+		8C080E4421E0280A00F15E5C /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C080E4321E0280A00F15E5C /* CategoryCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8C080E1121E01E6200F15E5C /* Card Drop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Card Drop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C080E1421E01E6200F15E5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8C080E1621E01E6200F15E5C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8C080E1921E01E6200F15E5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C080E1B21E01E6300F15E5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C080E1E21E01E6300F15E5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C080E2021E01E6300F15E5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C080E2721E01EC000F15E5C /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		8C080E2821E01EC000F15E5C /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		8C080E2921E01EC000F15E5C /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		8C080E2A21E01EC000F15E5C /* DataRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
+		8C080E2C21E01EC100F15E5C /* Images.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Images.plist; sourceTree = "<group>"; };
+		8C080E2D21E01EC100F15E5C /* Quotes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Quotes.plist; sourceTree = "<group>"; };
+		8C080E2E21E01EC100F15E5C /* Categories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Categories.plist; sourceTree = "<group>"; };
+		8C080E3621E0208C00F15E5C /* OverviewCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewCollectionViewController.swift; sourceTree = "<group>"; };
+		8C080E3921E0235700F15E5C /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
+		8C080E3A21E0235700F15E5C /* Montserrat-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.otf"; sourceTree = "<group>"; };
+		8C080E3B21E0235700F15E5C /* Montserrat-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.otf"; sourceTree = "<group>"; };
+		8C080E3C21E0235700F15E5C /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.otf"; sourceTree = "<group>"; };
+		8C080E3D21E0235700F15E5C /* Montserrat-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.otf"; sourceTree = "<group>"; };
+		8C080E4321E0280A00F15E5C /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +80,51 @@
 		8C080E1321E01E6200F15E5C /* Card Drop */ = {
 			isa = PBXGroup;
 			children = (
+				8C080E2B21E01EC100F15E5C /* Data */,
+				8C080E2621E01EC000F15E5C /* Model */,
+				8C080E3821E0235700F15E5C /* Fonts */,
 				8C080E1421E01E6200F15E5C /* AppDelegate.swift */,
-				8C080E1621E01E6200F15E5C /* ViewController.swift */,
+				8C080E3621E0208C00F15E5C /* OverviewCollectionViewController.swift */,
+				8C080E4321E0280A00F15E5C /* CategoryCollectionViewCell.swift */,
 				8C080E1821E01E6200F15E5C /* Main.storyboard */,
 				8C080E1B21E01E6300F15E5C /* Assets.xcassets */,
 				8C080E1D21E01E6300F15E5C /* LaunchScreen.storyboard */,
 				8C080E2021E01E6300F15E5C /* Info.plist */,
 			);
 			path = "Card Drop";
+			sourceTree = "<group>";
+		};
+		8C080E2621E01EC000F15E5C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8C080E2721E01EC000F15E5C /* Image.swift */,
+				8C080E2821E01EC000F15E5C /* Quote.swift */,
+				8C080E2921E01EC000F15E5C /* Category.swift */,
+				8C080E2A21E01EC000F15E5C /* DataRequest.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8C080E2B21E01EC100F15E5C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8C080E2C21E01EC100F15E5C /* Images.plist */,
+				8C080E2D21E01EC100F15E5C /* Quotes.plist */,
+				8C080E2E21E01EC100F15E5C /* Categories.plist */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8C080E3821E0235700F15E5C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8C080E3921E0235700F15E5C /* Montserrat-Bold.otf */,
+				8C080E3A21E0235700F15E5C /* Montserrat-ExtraLight.otf */,
+				8C080E3B21E0235700F15E5C /* Montserrat-Medium.otf */,
+				8C080E3C21E0235700F15E5C /* Montserrat-Regular.otf */,
+				8C080E3D21E0235700F15E5C /* Montserrat-SemiBold.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,8 +185,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C080E3F21E0235700F15E5C /* Montserrat-ExtraLight.otf in Resources */,
+				8C080E3321E01EC100F15E5C /* Images.plist in Resources */,
 				8C080E1F21E01E6300F15E5C /* LaunchScreen.storyboard in Resources */,
+				8C080E4121E0235700F15E5C /* Montserrat-Regular.otf in Resources */,
+				8C080E3E21E0235700F15E5C /* Montserrat-Bold.otf in Resources */,
 				8C080E1C21E01E6300F15E5C /* Assets.xcassets in Resources */,
+				8C080E3421E01EC100F15E5C /* Quotes.plist in Resources */,
+				8C080E4221E0235700F15E5C /* Montserrat-SemiBold.otf in Resources */,
+				8C080E3521E01EC100F15E5C /* Categories.plist in Resources */,
+				8C080E4021E0235700F15E5C /* Montserrat-Medium.otf in Resources */,
 				8C080E1A21E01E6200F15E5C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,7 +206,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C080E1721E01E6200F15E5C /* ViewController.swift in Sources */,
+				8C080E3021E01EC100F15E5C /* Quote.swift in Sources */,
+				8C080E3121E01EC100F15E5C /* Category.swift in Sources */,
+				8C080E3221E01EC100F15E5C /* DataRequest.swift in Sources */,
+				8C080E3721E0208C00F15E5C /* OverviewCollectionViewController.swift in Sources */,
+				8C080E2F21E01EC100F15E5C /* Image.swift in Sources */,
+				8C080E4421E0280A00F15E5C /* CategoryCollectionViewCell.swift in Sources */,
 				8C080E1521E01E6200F15E5C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
