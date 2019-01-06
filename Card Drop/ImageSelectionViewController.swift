@@ -14,6 +14,10 @@ class ImageSelectionViewController: UIViewController {
     var image: UIImage?
     var category: Category?
     
+    //pulling data from our plist file
+    let imageDataRequest = DataRequest<Image>(dataSource: "images")
+    var imageData = [Image]()
+    
     //MARK:- @IBOutlets
     @IBOutlet weak var initialImageView: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
@@ -27,6 +31,33 @@ class ImageSelectionViewController: UIViewController {
         }
     }
     
+    //load the data after the view loads
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        loadData()
+    }
+    
+    func loadData() {
+        imageDataRequest.getData { [weak self] dataResult in
+            switch dataResult {
+            case .failure:
+                print("could not load images")
+            case .success(let images):
+                self?.imageData = images
+                //if we have the image data, we can continue setting up the UI on the main thread
+                DispatchQueue.main.async {
+                    self?.setupUI()
+                }
+            }
+        }
+    }
+    
+    func setupUI() {
+        //get a photo view from the xib file - returns an arry of objects, we only need the first
+        guard let photoView = Bundle.main.loadNibNamed("PhotoView", owner: self, options: nil)?.first as? PhotoView else { return }
+    }
+    
+    //MARK:- @IBActions
     @IBAction func goBackButtonTapped(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
