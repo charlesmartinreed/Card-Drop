@@ -72,6 +72,22 @@ extension ScaleTransitioningDelegate : UIViewControllerAnimatedTransitioning {
         //make sure the proper autolayout occurs
         foregroundVC.view.layoutIfNeeded()
         
+        UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: [], animations: {
+            //this will embiggen our imageViewSnapshot
+            self.prepareViews(for: transitionStateB, containerView: containerView, backgroundVC: backgroundVC, backgroundImageView: backgroundImageView, foregroundImageView: foregroundImageView, snapshotImageView: imageViewSnapshot)
+        }) { (_) in
+            //clean up work after the animation is completed
+            backgroundVC.view.transform = .identity
+            imageViewSnapshot.removeFromSuperview()
+            backgroundImageView.isHidden = false
+            foregroundImageView.isHidden = false
+            
+            foregroundVC.view.backgroundColor = foregroundBGColor
+            
+            //tell the system our transition is complete - if the transition wasn't cancelled by the user or system, it was completed, hence the bang operator.
+            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+        }
+        
     }
     
     func prepareViews(for state: TransitionState, containerView: UIView, backgroundVC: UIViewController, backgroundImageView: UIImageView, foregroundImageView: UIImageView, snapshotImageView: UIImageView) {
@@ -91,5 +107,20 @@ extension ScaleTransitioningDelegate : UIViewControllerAnimatedTransitioning {
         }
     }
     
+    
+}
+
+extension ScaleTransitioningDelegate : UINavigationControllerDelegate {
+    
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        //operation is push (forward) or pop (go back to the previous) between VCs
+        
+        if fromVC is Scaling && toVC is Scaling {
+            //if both conform to scaling, we can perform our transition. Return self.
+            return self
+        } else {
+            return nil
+        }
+    }
     
 }
