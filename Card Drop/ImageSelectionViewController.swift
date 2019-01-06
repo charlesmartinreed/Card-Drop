@@ -26,16 +26,13 @@ class ImageSelectionViewController: UIViewController {
             categoryLabel.text = availableCategory.categoryName
         }
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+  //both the from and to VCs have to conform to scaling, but so does the Image View itself
+extension ImageSelectionViewController : Scaling {
+    func scaling(transition: ScaleTransitioningDelegate) -> UIImageView? {
+        return initialImageView
     }
-    */
-
+    
+    
 }

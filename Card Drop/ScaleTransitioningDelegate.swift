@@ -26,6 +26,7 @@ class ScaleTransitioningDelegate: NSObject {
     
     //MARK:- Animation properties
     let animationDuration = 0.5
+    var navigationControllerOperation: UINavigationController.Operation = .none //can be push, pop or none
 }
 
 //MARK:- UIViewControllerAnimatedTransitioning delegate methods
@@ -40,16 +41,30 @@ extension ScaleTransitioningDelegate : UIViewControllerAnimatedTransitioning {
         let containerView = transitionContext.containerView
         
         //grabe overview VC and image selection view controllers
-        guard let backgroundVC = transitionContext.viewController(forKey: .from) else { return }
-        guard let foregroundVC = transitionContext.viewController(forKey: .to) else { return }
+        guard let fromVC = transitionContext.viewController(forKey: .from) else { return }
+        guard let toVC = transitionContext.viewController(forKey: .to) else { return }
+        
+        //initial setup
+        var backgroundVC = fromVC
+        var foregroundVC = toVC
+        
+        if navigationControllerOperation == .pop {
+            //going back? Change our animation to "reverse" itself
+            backgroundVC = toVC
+            foregroundVC = fromVC
+        }
         
         //this works because anything that adopts the Scaling protocol must utilize this function, which in turn optionally returns an imageView. We'll use that image at the start and end of animation.
         guard let backgroundImageView = (backgroundVC as? Scaling)?.scaling(transition: self) else { return }
-        guard let foregroundImageView = (backgroundVC as? Scaling)?.scaling(transition: self) else { return }
+        guard let foregroundImageView = (foregroundVC as? Scaling)?.scaling(transition: self) else { return }
         
         let imageViewSnapshot = UIImageView(image: backgroundImageView.image)
         imageViewSnapshot.contentMode = .scaleAspectFill
         imageViewSnapshot.layer.masksToBounds = true
+        
+        if navigationControllerOperation == .pop {
+            imageViewSnapshot.layer.cornerRadius = 14
+        }
         
         //at the outset of the animation, we'll need to hide both of these
         backgroundImageView.isHidden = true
@@ -64,8 +79,14 @@ extension ScaleTransitioningDelegate : UIViewControllerAnimatedTransitioning {
         containerView.addSubview(foregroundVC.view)
         containerView.addSubview(imageViewSnapshot)
         
-        let transitionStateA = TransitionState.begin
-        let transitionStateB = TransitionState.end
+        var transitionStateA = TransitionState.begin
+        var transitionStateB = TransitionState.end
+        
+        if navigationControllerOperation == .pop {
+            transitionStateB = TransitionState.begin
+            transitionStateA = TransitionState.end
+        }
+        
         
         prepareViews(for: transitionStateA, containerView: containerView, backgroundVC: backgroundVC, backgroundImageView: backgroundImageView, foregroundImageView: foregroundImageView, snapshotImageView: imageViewSnapshot)
         
@@ -110,6 +131,7 @@ extension ScaleTransitioningDelegate : UIViewControllerAnimatedTransitioning {
     
 }
 
+//MARK:- UINavigationControllerDelegate delegate methods
 extension ScaleTransitioningDelegate : UINavigationControllerDelegate {
     
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -117,6 +139,9 @@ extension ScaleTransitioningDelegate : UINavigationControllerDelegate {
         
         if fromVC is Scaling && toVC is Scaling {
             //if both conform to scaling, we can perform our transition. Return self.
+            self.navigationControllerOperation = operation //we'll change our animation based on whether we're pushing or popping, but if we're pushing, the navigation controller should be gone
+            let navBarVisible = operation == .pop
+            navigationController.setNavigationBarHidden(!navBarVisible, animated: true)
             return self
         } else {
             return nil

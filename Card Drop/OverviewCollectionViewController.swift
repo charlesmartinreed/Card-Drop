@@ -16,6 +16,9 @@ class OverviewCollectionViewController: UICollectionViewController {
     let categoryDataRequest = DataRequest<Category>(dataSource: "Categories")
     var categoryData = [Category]()
     
+    //we need to know the item we're transitioning from in order for our custom animation to work as intended
+    var selectedIndexPath: IndexPath?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
@@ -88,6 +91,7 @@ extension OverviewCollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //segue to the detail view, populate the fields with correct info
         let category = categoryData[indexPath.item]
+        selectedIndexPath = indexPath
         
         self.performSegue(withIdentifier: "showDetail", sender: category)
     }
@@ -100,6 +104,20 @@ extension OverviewCollectionViewController: UICollectionViewDelegateFlowLayout {
         //fixing the spacing issues between the individual cells
         return UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         
+    }
+}
+
+//MARK:- Transitioning Animation Delegate
+extension OverviewCollectionViewController : Scaling {
+    func scaling(transition: ScaleTransitioningDelegate) -> UIImageView? {
+        if let indexPath = selectedIndexPath {
+            guard let cell = collectionView.cellForItem(at: indexPath) as? CategoryCollectionViewCell else { return nil }
+            
+            //we use this image view for our transition
+            return cell.backgroundImageView
+        }
+        
+        return nil
     }
 }
 

@@ -79,9 +79,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n0s-j5-ge6">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n0s-j5-ge6">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3b-0f-CfY">
                                 <rect key="frame" x="37" y="384" width="120" height="21"/>
@@ -92,6 +91,12 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="n0s-j5-ge6" firstAttribute="trailing" secondItem="FZd-5E-tfn" secondAttribute="trailing" id="FXM-tA-fsi"/>
+                            <constraint firstItem="n0s-j5-ge6" firstAttribute="top" secondItem="7uS-ot-R5O" secondAttribute="top" id="Htb-KG-h7M"/>
+                            <constraint firstItem="n0s-j5-ge6" firstAttribute="leading" secondItem="FZd-5E-tfn" secondAttribute="leading" id="SJn-nD-BPR"/>
+                            <constraint firstItem="n0s-j5-ge6" firstAttribute="bottom" secondItem="FZd-5E-tfn" secondAttribute="bottom" id="gDg-W4-PkS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FZd-5E-tfn"/>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
