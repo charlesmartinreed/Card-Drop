@@ -26,6 +26,11 @@ class ImageSelectionViewController: UIViewController {
             categoryLabel.text = availableCategory.categoryName
         }
     }
+    
+    @IBAction func goBackButtonTapped(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }
 
   //both the from and to VCs have to conform to scaling, but so does the Image View itself
