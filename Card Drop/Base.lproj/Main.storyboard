@@ -118,10 +118,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
+                        <outlet property="delegate" destination="mks-Ri-DTp" id="Lct-hE-wY7"/>
                         <segue destination="AlT-PW-GII" kind="relationship" relationship="rootViewController" id="I0v-9J-TrU"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LYH-wS-s0v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="mks-Ri-DTp" customClass="ScaleTransitioningDelegate" customModule="Card_Drop" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="48.799999999999997" y="53.523238380809602"/>
         </scene>

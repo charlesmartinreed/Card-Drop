@@ -26,6 +26,7 @@
 		8C080E4221E0235700F15E5C /* Montserrat-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8C080E3D21E0235700F15E5C /* Montserrat-SemiBold.otf */; };
 		8C080E4421E0280A00F15E5C /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C080E4321E0280A00F15E5C /* CategoryCollectionViewCell.swift */; };
 		8C080E4621E17F6D00F15E5C /* ImageSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C080E4521E17F6D00F15E5C /* ImageSelectionViewController.swift */; };
+		8C080E4821E183A800F15E5C /* ScaleTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C080E4721E183A800F15E5C /* ScaleTransitioningDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		8C080E3D21E0235700F15E5C /* Montserrat-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.otf"; sourceTree = "<group>"; };
 		8C080E4321E0280A00F15E5C /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		8C080E4521E17F6D00F15E5C /* ImageSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectionViewController.swift; sourceTree = "<group>"; };
+		8C080E4721E183A800F15E5C /* ScaleTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleTransitioningDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				8C080E3621E0208C00F15E5C /* OverviewCollectionViewController.swift */,
 				8C080E4521E17F6D00F15E5C /* ImageSelectionViewController.swift */,
 				8C080E4321E0280A00F15E5C /* CategoryCollectionViewCell.swift */,
+				8C080E4721E183A800F15E5C /* ScaleTransitioningDelegate.swift */,
 				8C080E1821E01E6200F15E5C /* Main.storyboard */,
 				8C080E1B21E01E6300F15E5C /* Assets.xcassets */,
 				8C080E1D21E01E6300F15E5C /* LaunchScreen.storyboard */,
@@ -213,6 +216,7 @@
 				8C080E4621E17F6D00F15E5C /* ImageSelectionViewController.swift in Sources */,
 				8C080E3121E01EC100F15E5C /* Category.swift in Sources */,
 				8C080E3221E01EC100F15E5C /* DataRequest.swift in Sources */,
+				8C080E4821E183A800F15E5C /* ScaleTransitioningDelegate.swift in Sources */,
 				8C080E3721E0208C00F15E5C /* OverviewCollectionViewController.swift in Sources */,
 				8C080E2F21E01EC100F15E5C /* Image.swift in Sources */,
 				8C080E4421E0280A00F15E5C /* CategoryCollectionViewCell.swift in Sources */,
