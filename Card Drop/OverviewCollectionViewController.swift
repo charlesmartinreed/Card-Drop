@@ -34,6 +34,21 @@ class OverviewCollectionViewController: UICollectionViewController {
             }
         }
     }
+    
+    //MARK:- segue methods
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail" {
+            //grab the category
+            let category = sender as! Category
+            guard let image = UIImage(named: category.categoryImageName) else { return }
+            
+            //create object of view controller
+            let imageSelectionVC = segue.destination as! ImageSelectionViewController
+            imageSelectionVC.image = image
+            imageSelectionVC.category = category
+        }
+    }
+    
 }
 
   
@@ -71,7 +86,10 @@ extension OverviewCollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //segue to the detail view, populate the fields with correct info
+        let category = categoryData[indexPath.item]
         
+        self.performSegue(withIdentifier: "showDetail", sender: category)
     }
 }
 
