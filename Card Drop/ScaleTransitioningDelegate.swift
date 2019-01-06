@@ -64,6 +64,31 @@ extension ScaleTransitioningDelegate : UIViewControllerAnimatedTransitioning {
         containerView.addSubview(foregroundVC.view)
         containerView.addSubview(imageViewSnapshot)
         
+        let transitionStateA = TransitionState.begin
+        let transitionStateB = TransitionState.end
+        
+        prepareViews(for: transitionStateA, containerView: containerView, backgroundVC: backgroundVC, backgroundImageView: backgroundImageView, foregroundImageView: foregroundImageView, snapshotImageView: imageViewSnapshot)
+        
+        //make sure the proper autolayout occurs
+        foregroundVC.view.layoutIfNeeded()
+        
+    }
+    
+    func prepareViews(for state: TransitionState, containerView: UIView, backgroundVC: UIViewController, backgroundImageView: UIImageView, foregroundImageView: UIImageView, snapshotImageView: UIImageView) {
+        
+        //adjusting the animatable properties of our views
+        switch state {
+        case .begin:
+            backgroundVC.view.transform = .identity
+            backgroundVC.view.alpha = 1
+            
+            //position in relation to the actual superview of oru background image view - convert converts rect from one view to the coordinate system of another. and we want our image to begin with the same frame size as one of our cards
+            snapshotImageView.frame = containerView.convert(backgroundImageView.frame, from: backgroundImageView.superview)
+        case .end:
+            backgroundVC.view.alpha = 0
+            //snapshot should cover whole screen OR shrunk to size of collection view cell
+            snapshotImageView.frame = containerView.convert(foregroundImageView.frame, from: foregroundImageView.superview)
+        }
     }
     
     
