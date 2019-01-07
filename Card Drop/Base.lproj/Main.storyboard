@@ -152,7 +152,9 @@ Tap to select.</string>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="backButton" destination="cDc-NZ-3Fh" id="Y67-Tc-dHQ"/>
                         <outlet property="categoryLabel" destination="N3b-0f-CfY" id="mSy-XI-CVj"/>
+                        <outlet property="initialDimView" destination="EeL-UK-gjF" id="7Zg-SE-dFh"/>
                         <outlet property="initialImageView" destination="n0s-j5-ge6" id="XoB-7d-lmj"/>
                         <outlet property="scrollView" destination="Hgd-im-5Yl" id="osM-OZ-mRe"/>
                     </connections>
