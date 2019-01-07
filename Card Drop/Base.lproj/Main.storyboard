@@ -88,14 +88,14 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hgd-im-5Yl">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="category1" translatesAutoresizingMaskIntoConstraints="NO" id="n0s-j5-ge6">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category1" translatesAutoresizingMaskIntoConstraints="NO" id="n0s-j5-ge6">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EeL-UK-gjF">
-                                        <rect key="frame" x="0.0" y="0.0" width="959" height="1343"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3b-0f-CfY">
-                                                <rect key="frame" x="30" y="524" width="224" height="35"/>
+                                                <rect key="frame" x="30" y="523" width="343" height="35"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="28"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -111,11 +111,11 @@ Tap to select.</string>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="epd-bU-eob" firstAttribute="leading" secondItem="N3b-0f-CfY" secondAttribute="leading" id="PNW-de-cjz"/>
-                                            <constraint firstAttribute="trailing" secondItem="N3b-0f-CfY" secondAttribute="trailing" constant="705" id="Rly-Qb-UEX"/>
-                                            <constraint firstItem="N3b-0f-CfY" firstAttribute="leading" secondItem="EeL-UK-gjF" secondAttribute="leading" constant="30" id="fUp-kb-QJT"/>
-                                            <constraint firstItem="epd-bU-eob" firstAttribute="top" secondItem="N3b-0f-CfY" secondAttribute="bottom" constant="8" id="tgG-Oc-m3k"/>
-                                            <constraint firstAttribute="bottom" secondItem="N3b-0f-CfY" secondAttribute="bottom" constant="784" id="uvX-Uq-2S4"/>
+                                            <constraint firstAttribute="bottom" secondItem="N3b-0f-CfY" secondAttribute="bottom" constant="338" id="HKj-FX-hDK"/>
+                                            <constraint firstItem="epd-bU-eob" firstAttribute="top" secondItem="N3b-0f-CfY" secondAttribute="bottom" constant="9" id="UVm-kg-EcV"/>
+                                            <constraint firstItem="N3b-0f-CfY" firstAttribute="leading" secondItem="EeL-UK-gjF" secondAttribute="leading" constant="30" id="cW8-AK-pxi"/>
+                                            <constraint firstAttribute="trailing" secondItem="N3b-0f-CfY" secondAttribute="trailing" constant="41" id="lQw-Cq-r0j"/>
+                                            <constraint firstItem="epd-bU-eob" firstAttribute="leading" secondItem="N3b-0f-CfY" secondAttribute="leading" id="pTQ-UV-UIy"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -127,6 +127,8 @@ Tap to select.</string>
                                     <constraint firstAttribute="bottom" secondItem="EeL-UK-gjF" secondAttribute="bottom" id="HR8-hC-4GM"/>
                                     <constraint firstItem="n0s-j5-ge6" firstAttribute="top" secondItem="Hgd-im-5Yl" secondAttribute="top" id="UrN-mh-ZY3"/>
                                     <constraint firstAttribute="trailing" secondItem="n0s-j5-ge6" secondAttribute="trailing" id="Zaf-Jj-bAj"/>
+                                    <constraint firstItem="n0s-j5-ge6" firstAttribute="width" secondItem="Hgd-im-5Yl" secondAttribute="width" id="dxD-1J-grg"/>
+                                    <constraint firstItem="n0s-j5-ge6" firstAttribute="height" secondItem="Hgd-im-5Yl" secondAttribute="height" id="uLS-yi-1PP"/>
                                     <constraint firstAttribute="trailing" secondItem="EeL-UK-gjF" secondAttribute="trailing" id="ykx-0s-h3c"/>
                                 </constraints>
                             </scrollView>
@@ -152,6 +154,7 @@ Tap to select.</string>
                     <connections>
                         <outlet property="categoryLabel" destination="N3b-0f-CfY" id="mSy-XI-CVj"/>
                         <outlet property="initialImageView" destination="n0s-j5-ge6" id="XoB-7d-lmj"/>
+                        <outlet property="scrollView" destination="Hgd-im-5Yl" id="osM-OZ-mRe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KXL-lP-agB" userLabel="First Responder" sceneMemberID="firstResponder"/>

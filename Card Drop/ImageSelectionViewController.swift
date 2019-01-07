@@ -15,12 +15,13 @@ class ImageSelectionViewController: UIViewController {
     var category: Category?
     
     //pulling data from our plist file
-    let imageDataRequest = DataRequest<Image>(dataSource: "images")
+    let imageDataRequest = DataRequest<Image>(dataSource: "Images")
     var imageData = [Image]()
     
     //MARK:- @IBOutlets
     @IBOutlet weak var initialImageView: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,8 +54,27 @@ class ImageSelectionViewController: UIViewController {
     }
     
     func setupUI() {
-        //get a photo view from the xib file - returns an arry of objects, we only need the first
-        guard let photoView = Bundle.main.loadNibNamed("PhotoView", owner: self, options: nil)?.first as? PhotoView else { return }
+        //adjusting the scroll view - scrolling from leading to trailing
+        //total width is equal to the base frame * the number of images, INCLUDING THE INITIAL IMAGE
+        scrollView.contentSize.width = self.scrollView.frame.width * CGFloat(imageData.count + 1)
+        
+        for (i, image) in imageData.enumerated() {
+            //create frame for photo view - second item in the list needs to be offset by the width of the frame, + 1 because i begins at 0
+            let frame = CGRect(x: self.scrollView.frame.width * CGFloat(i + 1), y: 0, width: self.scrollView.frame.width, height: self.scrollView.frame.height)
+            
+            //get a photo view from the xib file - returns an arry of objects, we only need the first
+            guard let photoView = Bundle.main.loadNibNamed("PhotoView", owner: self, options: nil)?.first as? PhotoView else { return }
+            
+            //configure the photoview and add it to the scrollView
+            photoView.frame = frame
+            photoView.imageView.image = UIImage(named: image.imageName)!
+            
+            photoView.descriptionLabel.text = image.description
+            photoView.photographerLabel.text = image.photographer
+            
+            scrollView.addSubview(photoView)
+        }
+        
     }
     
     //MARK:- @IBActions

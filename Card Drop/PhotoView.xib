@@ -24,14 +24,14 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category1" translatesAutoresizingMaskIntoConstraints="NO" id="77u-gv-STp">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category1" translatesAutoresizingMaskIntoConstraints="NO" id="77u-gv-STp">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pdh-bQ-rTv">
-                    <rect key="frame" x="0.0" y="0.0" width="959" height="896"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgl-M8-Pmx">
-                            <rect key="frame" x="30" y="524" width="224" height="35"/>
+                            <rect key="frame" x="30" y="524" width="343" height="35"/>
                             <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="28"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -51,14 +51,14 @@ Tap to select.</string>
                         <constraint firstAttribute="bottom" secondItem="sgl-M8-Pmx" secondAttribute="bottom" constant="337" id="Grb-1u-j5d"/>
                         <constraint firstItem="sQy-M2-KbB" firstAttribute="top" secondItem="sgl-M8-Pmx" secondAttribute="bottom" constant="8" id="RAb-Ts-Hys"/>
                         <constraint firstItem="sQy-M2-KbB" firstAttribute="leading" secondItem="sgl-M8-Pmx" secondAttribute="leading" id="dOs-Gv-PjD"/>
-                        <constraint firstAttribute="trailing" secondItem="sgl-M8-Pmx" secondAttribute="trailing" constant="705" id="os8-ir-S1D"/>
+                        <constraint firstAttribute="trailing" secondItem="sgl-M8-Pmx" secondAttribute="trailing" constant="41" id="os8-ir-S1D"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="top" secondItem="pdh-bQ-rTv" secondAttribute="top" id="2M9-gH-UhH"/>
-                <constraint firstItem="pdh-bQ-rTv" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="545" id="FBq-KR-91p"/>
+                <constraint firstItem="pdh-bQ-rTv" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="FBq-KR-91p"/>
                 <constraint firstItem="pdh-bQ-rTv" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="VfX-Yw-rXw"/>
                 <constraint firstItem="77u-gv-STp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bBt-Li-S0m"/>
                 <constraint firstAttribute="bottom" secondItem="77u-gv-STp" secondAttribute="bottom" id="q4r-GI-sdX"/>
