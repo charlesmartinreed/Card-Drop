@@ -93,6 +93,23 @@ class ImageSelectionViewController: UIViewController {
             scrollView.addSubview(photoView)
         }
         
+        // set up the gesture recognizer
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapOnScrollView(recognizer:)))
+        scrollView.addGestureRecognizer(tapGestureRecognizer)
+        
+    }
+    
+    //MARK:- Gesture handling
+    @objc func didTapOnScrollView(recognizer: UITapGestureRecognizer) {
+        if currentScrollViewPage != 0 {
+            //if not on initial page, can perform segue
+            self.performSegue(withIdentifier: "showCard", sender: self)
+        } else {
+            //move to the next image card
+            scrollView.setContentOffset(CGPoint(x: self.view.frame.width, y: 0), animated: true)
+            currentScrollViewPage = 1
+        }
+        
     }
     
     //MARK:- @IBActions

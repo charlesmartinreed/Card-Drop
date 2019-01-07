@@ -195,7 +195,7 @@ Tap to select.</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lEH-wC-aFO">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lEH-wC-aFO">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vWE-3s-X3C">
@@ -229,8 +229,8 @@ Tap to select.</string>
                                             <action selector="shareCard:" destination="32z-a1-XF2" eventType="touchUpInside" id="yaA-9J-ng7"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJQ-NO-Y6S" userLabel="The best preperation for tomorrow is doing  your best today.">
-                                        <rect key="frame" x="83" y="408" width="248" height="80.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJQ-NO-Y6S" userLabel="The best preperation for tomorrow is doing  your best today.">
+                                        <rect key="frame" x="60" y="420" width="294" height="80.5"/>
                                         <string key="text">The best preperation
 for tomorrow is doing 
 your best today.</string>
@@ -238,8 +238,8 @@ your best today.</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- H. Jackson Brown, Jr." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hR6-GO-UI2">
-                                        <rect key="frame" x="95.5" y="536" width="223" height="25"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- H. Jackson Brown, Jr." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hR6-GO-UI2">
+                                        <rect key="frame" x="95.5" y="508.5" width="223" height="25"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -248,15 +248,15 @@ your best today.</string>
                                 <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="pG7-68-SAh" firstAttribute="centerX" secondItem="vWE-3s-X3C" secondAttribute="centerX" id="3WE-82-2Wm"/>
-                                    <constraint firstAttribute="trailing" secondItem="HJQ-NO-Y6S" secondAttribute="trailing" constant="83" id="K9P-Mj-Cp0"/>
-                                    <constraint firstItem="HJQ-NO-Y6S" firstAttribute="top" secondItem="pG7-68-SAh" secondAttribute="bottom" constant="8" id="Y2z-CE-Z3t"/>
+                                    <constraint firstAttribute="trailing" secondItem="HJQ-NO-Y6S" secondAttribute="trailing" constant="60" id="K9P-Mj-Cp0"/>
+                                    <constraint firstItem="HJQ-NO-Y6S" firstAttribute="top" secondItem="pG7-68-SAh" secondAttribute="bottom" constant="20" id="Y2z-CE-Z3t"/>
                                     <constraint firstItem="pG7-68-SAh" firstAttribute="top" secondItem="vWE-3s-X3C" secondAttribute="top" constant="347" id="j9i-Y8-Cia"/>
                                     <constraint firstAttribute="trailing" secondItem="hR6-GO-UI2" secondAttribute="trailing" constant="95.5" id="kOw-td-pVN"/>
-                                    <constraint firstItem="hR6-GO-UI2" firstAttribute="top" secondItem="HJQ-NO-Y6S" secondAttribute="bottom" constant="47.5" id="lkC-t5-rLe"/>
+                                    <constraint firstItem="hR6-GO-UI2" firstAttribute="top" secondItem="HJQ-NO-Y6S" secondAttribute="bottom" constant="8" id="lkC-t5-rLe"/>
                                     <constraint firstItem="hR6-GO-UI2" firstAttribute="centerX" secondItem="vWE-3s-X3C" secondAttribute="centerX" id="nlS-9X-sVZ"/>
                                     <constraint firstItem="HJQ-NO-Y6S" firstAttribute="centerX" secondItem="vWE-3s-X3C" secondAttribute="centerX" id="pQJ-pe-JTX"/>
                                     <constraint firstItem="hR6-GO-UI2" firstAttribute="leading" secondItem="vWE-3s-X3C" secondAttribute="leading" constant="95.5" id="vhQ-bv-oqy"/>
-                                    <constraint firstItem="HJQ-NO-Y6S" firstAttribute="leading" secondItem="vWE-3s-X3C" secondAttribute="leading" constant="83" id="zHx-uH-GPi"/>
+                                    <constraint firstItem="HJQ-NO-Y6S" firstAttribute="leading" secondItem="vWE-3s-X3C" secondAttribute="leading" constant="60" id="zHx-uH-GPi"/>
                                 </constraints>
                             </view>
                         </subviews>

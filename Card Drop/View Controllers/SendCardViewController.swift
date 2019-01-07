@@ -48,6 +48,7 @@ class SendCardViewController: UIViewController {
     
     //MARK:- IBActions
     @IBAction func dismissVC(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func shareCard(_ sender: UIButton) {
