@@ -52,6 +52,20 @@ class SendCardViewController: UIViewController {
     }
     
     @IBAction func shareCard(_ sender: UIButton) {
+        
+        //filter the subviews in the container view to remove the buttons
+        _ = textContainerView.subviews.filter({$0 is UIButton}).map({$0.isHidden = true})
+        
+        //1. take a screenshot of the view
+        let image = self.view.screenshot()
+        
+        
+        //unhide the buttons
+        _ = textContainerView.subviews.filter({$0 is UIButton}).map({$0.isHidden = false})
+        
+        //2. present the activity view controller
+        let activityVC = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        self.present(activityVC, animated: true, completion: nil)
     }
     
 }
