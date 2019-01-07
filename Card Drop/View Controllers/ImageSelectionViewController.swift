@@ -13,6 +13,7 @@ class ImageSelectionViewController: UIViewController {
     //MARK: Properties
     var image: UIImage?
     var category: Category?
+    var currentScrollViewPage: Int = 0
     
     //pulling data from our plist file
     let imageDataRequest = DataRequest<Image>(dataSource: "Images")
@@ -24,6 +25,8 @@ class ImageSelectionViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var initialDimView: UIView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +70,8 @@ class ImageSelectionViewController: UIViewController {
             self.backButton.alpha = 1
         }
         
+        scrollView.delegate = self
+        
         //adjusting the scroll view - scrolling from leading to trailing
         //total width is equal to the base frame * the number of images, INCLUDING THE INITIAL IMAGE
         scrollView.contentSize.width = self.scrollView.frame.width * CGFloat(imageData.count + 1)
@@ -107,6 +112,19 @@ class ImageSelectionViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showCard" {
+            //if we're heading to the share card
+            guard let sendCardVC = segue.destination as? SendCardViewController else { return }
+            
+            //image to populate the VC with - initial image for the category shouldn't be shared, hence -1
+            guard let imageToSend = UIImage(named: imageData[currentScrollViewPage - 1].imageName) else { return }
+            
+            sendCardVC.backgroundImage = imageToSend
+            sendCardVC.modalTransitionStyle = .crossDissolve //even though we're actually doing this in IB
+        }
+    }
+    
 }
 
   //both the from and to VCs have to conform to scaling, but so does the Image View itself
@@ -114,6 +132,12 @@ extension ImageSelectionViewController : Scaling {
     func scaling(transition: ScaleTransitioningDelegate) -> UIImageView? {
         return initialImageView
     }
-    
-    
+}
+
+extension ImageSelectionViewController : UIScrollViewDelegate {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        //called whenever the scroll view stops moving/decelerating
+        
+        currentScrollViewPage = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
+    }
 }

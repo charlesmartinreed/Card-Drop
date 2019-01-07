@@ -157,6 +157,7 @@ Tap to select.</string>
                         <outlet property="initialDimView" destination="EeL-UK-gjF" id="7Zg-SE-dFh"/>
                         <outlet property="initialImageView" destination="n0s-j5-ge6" id="XoB-7d-lmj"/>
                         <outlet property="scrollView" destination="Hgd-im-5Yl" id="osM-OZ-mRe"/>
+                        <segue destination="32z-a1-XF2" kind="presentation" identifier="showCard" modalTransitionStyle="crossDissolve" id="3aD-i4-Bq4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KXL-lP-agB" userLabel="First Responder" sceneMemberID="firstResponder"/>
