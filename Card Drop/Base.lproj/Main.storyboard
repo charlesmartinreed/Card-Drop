@@ -186,8 +186,110 @@ Tap to select.</string>
             </objects>
             <point key="canvasLocation" x="48.799999999999997" y="53.523238380809602"/>
         </scene>
+        <!--Send Card View Controller-->
+        <scene sceneID="fCV-Gm-tcu">
+            <objects>
+                <viewController id="32z-a1-XF2" customClass="SendCardViewController" customModule="Card_Drop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tcp-4K-1J1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lEH-wC-aFO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vWE-3s-X3C">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40I-y2-dgd">
+                                        <rect key="frame" x="30" y="55" width="26" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="CancelButtonDark"/>
+                                        <connections>
+                                            <action selector="dismissVC:" destination="32z-a1-XF2" eventType="touchUpInside" id="fQl-Fp-uJX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pG7-68-SAh">
+                                        <rect key="frame" x="119.5" y="347" width="175" height="53"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="175" id="Tjl-Hv-1JJ"/>
+                                            <constraint firstAttribute="height" constant="53" id="hPF-KG-cDe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="28"/>
+                                        <state key="normal" title="Share Card">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="14"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="shareCard:" destination="32z-a1-XF2" eventType="touchUpInside" id="yaA-9J-ng7"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJQ-NO-Y6S" userLabel="The best preperation for tomorrow is doing  your best today.">
+                                        <rect key="frame" x="83" y="408" width="248" height="80.5"/>
+                                        <string key="text">The best preperation
+for tomorrow is doing 
+your best today.</string>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- H. Jackson Brown, Jr." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hR6-GO-UI2">
+                                        <rect key="frame" x="95.5" y="536" width="223" height="25"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="pG7-68-SAh" firstAttribute="centerX" secondItem="vWE-3s-X3C" secondAttribute="centerX" id="3WE-82-2Wm"/>
+                                    <constraint firstAttribute="trailing" secondItem="HJQ-NO-Y6S" secondAttribute="trailing" constant="83" id="K9P-Mj-Cp0"/>
+                                    <constraint firstItem="HJQ-NO-Y6S" firstAttribute="top" secondItem="pG7-68-SAh" secondAttribute="bottom" constant="8" id="Y2z-CE-Z3t"/>
+                                    <constraint firstItem="pG7-68-SAh" firstAttribute="top" secondItem="vWE-3s-X3C" secondAttribute="top" constant="347" id="j9i-Y8-Cia"/>
+                                    <constraint firstAttribute="trailing" secondItem="hR6-GO-UI2" secondAttribute="trailing" constant="95.5" id="kOw-td-pVN"/>
+                                    <constraint firstItem="hR6-GO-UI2" firstAttribute="top" secondItem="HJQ-NO-Y6S" secondAttribute="bottom" constant="47.5" id="lkC-t5-rLe"/>
+                                    <constraint firstItem="hR6-GO-UI2" firstAttribute="centerX" secondItem="vWE-3s-X3C" secondAttribute="centerX" id="nlS-9X-sVZ"/>
+                                    <constraint firstItem="HJQ-NO-Y6S" firstAttribute="centerX" secondItem="vWE-3s-X3C" secondAttribute="centerX" id="pQJ-pe-JTX"/>
+                                    <constraint firstItem="hR6-GO-UI2" firstAttribute="leading" secondItem="vWE-3s-X3C" secondAttribute="leading" constant="95.5" id="vhQ-bv-oqy"/>
+                                    <constraint firstItem="HJQ-NO-Y6S" firstAttribute="leading" secondItem="vWE-3s-X3C" secondAttribute="leading" constant="83" id="zHx-uH-GPi"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lEH-wC-aFO" firstAttribute="top" secondItem="tcp-4K-1J1" secondAttribute="top" id="Cay-3R-TlV"/>
+                            <constraint firstItem="lEH-wC-aFO" firstAttribute="trailing" secondItem="DKa-dK-8oZ" secondAttribute="trailing" id="FWZ-hi-mCJ"/>
+                            <constraint firstItem="lEH-wC-aFO" firstAttribute="trailing" secondItem="DKa-dK-8oZ" secondAttribute="trailing" id="JVC-tO-kFb"/>
+                            <constraint firstItem="vWE-3s-X3C" firstAttribute="trailing" secondItem="DKa-dK-8oZ" secondAttribute="trailing" id="JeG-1f-4fK"/>
+                            <constraint firstItem="lEH-wC-aFO" firstAttribute="top" secondItem="tcp-4K-1J1" secondAttribute="top" id="PjX-pf-PoS"/>
+                            <constraint firstAttribute="bottom" secondItem="lEH-wC-aFO" secondAttribute="bottom" id="S7N-cN-Rt2"/>
+                            <constraint firstAttribute="bottom" secondItem="lEH-wC-aFO" secondAttribute="bottom" id="kdm-Hq-Jhb"/>
+                            <constraint firstItem="lEH-wC-aFO" firstAttribute="leading" secondItem="DKa-dK-8oZ" secondAttribute="leading" id="pgm-9a-nYs"/>
+                            <constraint firstItem="vWE-3s-X3C" firstAttribute="leading" secondItem="DKa-dK-8oZ" secondAttribute="leading" id="qpD-5a-z7T"/>
+                            <constraint firstAttribute="bottom" secondItem="vWE-3s-X3C" secondAttribute="bottom" id="rXL-Hl-DuC"/>
+                            <constraint firstItem="vWE-3s-X3C" firstAttribute="top" secondItem="tcp-4K-1J1" secondAttribute="top" id="s2I-Cd-PA2"/>
+                            <constraint firstItem="lEH-wC-aFO" firstAttribute="leading" secondItem="DKa-dK-8oZ" secondAttribute="leading" id="uMY-G2-3mm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DKa-dK-8oZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="authorLabel" destination="hR6-GO-UI2" id="C9A-aJ-HNN"/>
+                        <outlet property="backgroundImageView" destination="lEH-wC-aFO" id="eTf-Bn-7W6"/>
+                        <outlet property="quoteLabel" destination="HJQ-NO-Y6S" id="b3g-Wu-V9r"/>
+                        <outlet property="textContainerView" destination="vWE-3s-X3C" id="HdI-WG-4yn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BSW-Hk-oqC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2444.9275362318845" y="52.901785714285715"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="CancelButtonDark" width="26" height="26"/>
         <image name="CancelButtonLight" width="26" height="26"/>
         <image name="category1" width="959" height="1343"/>
     </resources>

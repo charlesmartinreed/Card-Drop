@@ -29,6 +29,7 @@
 		8C080E4821E183A800F15E5C /* ScaleTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C080E4721E183A800F15E5C /* ScaleTransitioningDelegate.swift */; };
 		8C1B35F821E2C1BF00E1976B /* PhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C1B35F721E2C1BF00E1976B /* PhotoView.xib */; };
 		8C1B35FA21E2C4DF00E1976B /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B35F921E2C4DF00E1976B /* PhotoView.swift */; };
+		8CEFA69121E2E20E0016179B /* SendCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEFA69021E2E20E0016179B /* SendCardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		8C080E4721E183A800F15E5C /* ScaleTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleTransitioningDelegate.swift; sourceTree = "<group>"; };
 		8C1B35F721E2C1BF00E1976B /* PhotoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoView.xib; sourceTree = "<group>"; };
 		8C1B35F921E2C4DF00E1976B /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
+		8CEFA69021E2E20E0016179B /* SendCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,15 +92,13 @@
 			children = (
 				8C080E2B21E01EC100F15E5C /* Data */,
 				8C080E2621E01EC000F15E5C /* Model */,
+				8CEFA69221E2E3DC0016179B /* View Controllers */,
 				8C080E3821E0235700F15E5C /* Fonts */,
+				8CEFA69321E2E4A60016179B /* PhotoView */,
 				8C080E1421E01E6200F15E5C /* AppDelegate.swift */,
-				8C080E3621E0208C00F15E5C /* OverviewCollectionViewController.swift */,
-				8C080E4521E17F6D00F15E5C /* ImageSelectionViewController.swift */,
 				8C080E4321E0280A00F15E5C /* CategoryCollectionViewCell.swift */,
 				8C080E4721E183A800F15E5C /* ScaleTransitioningDelegate.swift */,
 				8C080E1821E01E6200F15E5C /* Main.storyboard */,
-				8C1B35F721E2C1BF00E1976B /* PhotoView.xib */,
-				8C1B35F921E2C4DF00E1976B /* PhotoView.swift */,
 				8C080E1B21E01E6300F15E5C /* Assets.xcassets */,
 				8C080E1D21E01E6300F15E5C /* LaunchScreen.storyboard */,
 				8C080E2021E01E6300F15E5C /* Info.plist */,
@@ -137,6 +137,25 @@
 				8C080E3D21E0235700F15E5C /* Montserrat-SemiBold.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		8CEFA69221E2E3DC0016179B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8CEFA69021E2E20E0016179B /* SendCardViewController.swift */,
+				8C080E3621E0208C00F15E5C /* OverviewCollectionViewController.swift */,
+				8C080E4521E17F6D00F15E5C /* ImageSelectionViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		8CEFA69321E2E4A60016179B /* PhotoView */ = {
+			isa = PBXGroup;
+			children = (
+				8C1B35F721E2C1BF00E1976B /* PhotoView.xib */,
+				8C1B35F921E2C4DF00E1976B /* PhotoView.swift */,
+			);
+			path = PhotoView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +242,7 @@
 				8C080E4621E17F6D00F15E5C /* ImageSelectionViewController.swift in Sources */,
 				8C080E3121E01EC100F15E5C /* Category.swift in Sources */,
 				8C1B35FA21E2C4DF00E1976B /* PhotoView.swift in Sources */,
+				8CEFA69121E2E20E0016179B /* SendCardViewController.swift in Sources */,
 				8C080E3221E01EC100F15E5C /* DataRequest.swift in Sources */,
 				8C080E4821E183A800F15E5C /* ScaleTransitioningDelegate.swift in Sources */,
 				8C080E3721E0208C00F15E5C /* OverviewCollectionViewController.swift in Sources */,
